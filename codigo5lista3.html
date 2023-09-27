@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Múltiplos de Três</title>
+</head>
+<body>
+    <h1>Múltiplos de Três</h1>
+    <p>Os múltiplos de três no intervalo de 1 a 100 são:</p>
+    <ul id="multiplosDeTres"></ul>
+
+    <script>
+        var listaMultiplosDeTres = document.getElementById("multiplosDeTres");
+
+        for (var i = 1; i <= 100; i++) {
+            if (i % 3 === 0) {
+                var itemLista = document.createElement("li");
+                itemLista.textContent = i;
+                listaMultiplosDeTres.appendChild(itemLista);
+            }
+        }
+    </script>
+</body>
+</html>

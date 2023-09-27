@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Contagem Regressiva</title>
+</head>
+<body>
+    <h1>Contagem Regressiva</h1>
+    <p>Informe um número inteiro positivo:</p>
+    <input type="number" id="numero" placeholder="Número">
+    <button onclick="iniciarContagemRegressiva()">Iniciar Contagem</button>
+    <p id="contagemRegressiva"></p>
+
+    <script>
+        function iniciarContagemRegressiva() {
+            var numero = parseInt(document.getElementById("numero").value);
+
+            if (numero >= 0) {
+                var contagem = "";
+                for (var i = numero; i >= 0; i--) {
+                    contagem += i + " ";
+                }
+                document.getElementById("contagemRegressiva").textContent = contagem;
+            } else {
+                document.getElementById("contagemRegressiva").textContent = "Informe um número positivo.";
+            }
+        }
+    </script>
+</body>
+</html>
